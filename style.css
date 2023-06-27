@@ -891,9 +891,9 @@ aside {
     justify-content: center;
     align-items: center;
 }
-.caja-montage-videos .video-montage {
+.caja-montage-videos iframe {
     width: 1400px;
-    height: 800px;
+    height: 790px;
     object-fit: cover;
     border: 2px solid var(--color-dorado);
 }
