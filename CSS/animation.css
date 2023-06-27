@@ -1,0 +1,130 @@
+:root {
+    --color-carbon: #191919;
+    --color-negro: #111318;
+    --color-gris: #6c757d;
+    --color-blanco: #d9d5bb;
+    --color-rojo: #ff4655;
+    --color-dorado: #937341;
+    --color-marron: #31271e;
+}
+
+/*! ANIMACIÓN FADE (Pasar de opacidad de 0 a 1) */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*! ANIMACIÓN DE SLIDE (Hacer llegar al elemento desde abajo hacia arriba) */
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/*! ANIMACIÓN DE SLIDE (Hacer llegar al elemento desde arriba hacia abajo) */
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-175px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/*! ANIMACIÓN DE SLIDE (Hacer llegar al elemento desde derecha hacia izquierda) */
+
+@keyframes slide-left {
+    from {
+        transform: translatex(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/*! ANIMACIÓN DE SLIDE (Hacer llegar al elemento desde izquierda hacia derecha) */
+
+@keyframes slide-right {
+    from {
+        transform: translatex(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/*! ANIMACIÓN DE THRESH CHIQUITO (Skew) */
+
+@keyframes thresh-chibi {
+    0% {
+        transform: skew(0deg);
+    }
+    25% {
+        transform: skew(-15deg, -15deg);
+    }
+    50% {
+        transform: skew(25deg, 25deg);
+    }
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    5% {margin-left: 0;}
+
+    7% {margin-left: -100%;}
+    12% {margin-left: -100%;}
+
+    14% {margin-left: -200%;}
+    19% {margin-left: -200%;}
+
+    21% {margin-left: -300%;}
+    26% {margin-left: -300%;}
+
+    28% {margin-left: -400%;}
+    33% {margin-left: -400%;}
+
+    35% {margin-left: -500%;}
+    40% {margin-left: -500%;}
+
+    42% {margin-left: -600%;}
+    47% {margin-left: -600%;}
+
+    49% {margin-left: -700%;}
+    54% {margin-left: -700%;}
+
+    56% {margin-left: -800%;}
+    61% {margin-left: -800%;}
+
+    63% {margin-left: -900%;}
+    68% {margin-left: -900%;}
+
+    70% {margin-left: -1000%;}
+    75% {margin-left: -1000%;}
+
+    77% {margin-left: -1100%;}
+    82% {margin-left: -1100%;}
+
+    84% {margin-left: -1200%;}
+    89% {margin-left: -1200%;}
+
+    91% {margin-left: -1300%;}
+    96% {margin-left: -1300%;}
+
+    98% {margin-left: -1300%;}
+    100% {margin-left: -1300%;}
+}

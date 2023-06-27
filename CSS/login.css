@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+:root {
+    --color-carbon: #101414;
+    --color-negro: #111318;
+    --color-gris: #6c757d;
+    --color-blanco: #d9d5bb;
+    --color-rojo: #ff4655;
+    --color-verde: #147253;
+    --color-dorado: #937341;
+    --color-marron: #31271e;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: var(--color-carbon) ;
+    width: 100%;
+}
+body::-webkit-scrollbar {
+    width: 20px;
+    background: var(--color-negro);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--color-dorado);
+    border-radius: 2px;
+}
+
+/* PAGINA LOGIN */
+
+#login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fondo-login {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;
+}
+
+.login-contenedor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    background: rgba(17, 19, 24, 0.94);
+    border: 2px solid var(--color-dorado);
+    padding: 50px;
+    margin: 120px;
+    gap: 50px;
+    animation: fade 1.5s ease-in;
+}
+.titulo-caja {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.titulo-caja a {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--color-blanco);
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.4s linear;
+}
+.titulo-caja a:hover {
+    color: var(--color-dorado);
+    border-bottom: 4px solid var(--color-dorado);
+}
+.titulo-caja a:first-child {
+    color: var(--color-dorado);
+    font-size: 28px;
+    border-bottom: 4px solid var(--color-dorado);
+}
+.login-caja {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.login-caja button {
+    width: 33%;
+    height: 60px;
+    border-radius: 10px;
+    opacity: 0.5;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+.login-caja button:hover {
+    scale: 1.1;
+    opacity: 1;
+}
+.login-caja button img {
+    width: 40px;
+    color: var(--color-blanco);
+}
+.login-caja button:nth-child(1) {
+    background: #7289da;
+}
+.login-caja button:nth-child(2) {
+    background: var(--color-blanco);
+}
+.login-caja button:nth-child(3) {
+    background: #6441a5;
+}
+.correo-caja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.correo-caja p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blanco);
+    letter-spacing: 2px;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.form-caja {
+    position: relative;
+}
+.form-caja input{
+    background: var(--color-carbon);
+    width: 100%;
+    height: 65px;
+    color: var(--color-blanco);
+    padding: 25px 50px 25px 76px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--color-blanco);
+    outline: none;
+    border: 2px solid var(--color-dorado);
+    border-radius: 10px;
+}
+.form-caja .fa-solid {
+    position: absolute;
+    top: 22px;
+    left: 30px;
+    font-size: 25px;
+    color: var(--color-dorado);
+}
+.enviar {
+    width: 100%;
+    height: 65px;
+    border-radius: 10px;
+    border: 3px solid var(--color-blanco);
+    background: var(--color-dorado);
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+.enviar:hover {
+    background: var(--color-blanco);
+    border: 3px solid var(--color-dorado); 
+}
+.enviar span {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-carbon);
+    letter-spacing: 5px;
+}
+.contraseña-caja {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.contraseña-caja a {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-dorado);
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+.inicio-caja {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.inicio-caja a{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-dorado);
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+.inicio-caja .fa-solid {
+    font-size: 25px;
+    color: var(--color-dorado);
+    margin-right: 15px;
+}
