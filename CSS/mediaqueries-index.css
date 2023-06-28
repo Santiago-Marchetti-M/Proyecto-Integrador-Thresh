@@ -527,6 +527,9 @@
     /* FIN HEADER  */
     /* INICIO PORTADA  */
 
+    .video-inicio {
+        display: none;
+    }
     .imagen-fondo {
         display: flex;
     }
