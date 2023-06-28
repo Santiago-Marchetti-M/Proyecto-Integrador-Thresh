@@ -658,6 +658,10 @@
         line-height: 20px;
         width: 75px;
     }
+    .build-contenedor {
+        width: 70%;
+        margin: 100px 25px 0 25px;
+    }
     .principal .fondo {
         width: 350px;
         height: 10px;
@@ -673,8 +677,8 @@
     .terciarias .fondo {
         width: 150px;
         height: 10px;
-        top: 12%;
-        left: 5%;
+        top: 40%;
+        left: 8%;
     }
     .runas-terciarias-caja {
         margin-left: 10px;
@@ -701,18 +705,7 @@
         gap: 25px;
     }
     .runas-terciarias-caja-texto {
-        display: flex;
-        flex-direction: column;
-        width: 140px;
-        margin-left: 50px;
-    }
-    .runas-terciarias-caja-texto span {
-        font-size: 20px;
-        letter-spacing: 3px;
-    }
-    .runas-terciarias-caja-texto p {
-        font-size: 14px;
-        line-height: 25px;
+        display: none;
     }
 
     #build h3 {
@@ -791,4 +784,78 @@
 
     /* FINAL MONTAGE  */
 
+}
+
+/*! CELULAR VERTICAL */
+
+@media (max-width: 500px) { 
+
+    /* INICIO BUILD  */
+
+    .runas {
+        gap: 0px;
+    }
+    .principal .fondo {
+        width: 300px;
+        height: 8px;
+        top: 14.5%;
+        left: 7%;
+    }
+    .secundaria .fondo {
+        width: 180px;
+        height: 8px;
+        top: 14.5%;
+        left: 10%;
+    }
+    .terciarias .fondo {
+        width: 130px;
+        height: 8px;
+        top: 40%;
+        left: 10%;
+    }
+    .runas-terciarias-caja {
+        margin-left: 15px;
+    }
+    .runas-imagen {
+        height: 40px;
+        width: 40px;
+    }
+    .runas-caja {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .runas-contenedor-terciaria {
+        height: 40px;
+        width: 40px;
+    }
+    .runas-imagen-terciarias {
+        top: 30%;
+        left: 29%;
+        height: 15px;
+        width: 15px;
+    }
+    .runas-terciarias-caja {
+        gap: 25px;
+    }
+
+    #build h3 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .objetos {
+        gap: 5px;
+        padding: 25px 25px 25px 25px;
+    }
+    .objeto-imagen {
+        width: 40px;
+        height: 40px;
+    }
+    .objetos-contenedor span {
+        font-size: 14px;
+        letter-spacing: 0px;
+        line-height: 20px;
+        width: 100px;
+    }
+
+    /* FIN BUILD  */
 }
