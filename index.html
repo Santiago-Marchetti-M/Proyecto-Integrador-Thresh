@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/79b9c5f2b8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/CSS/animation.css">
+    <link rel="stylesheet" href="/CSS/mediaqueries-index.css">
     <title>Thresh</title>
 </head>
 <body>
@@ -18,21 +19,27 @@
 
     <header id="header">
         <nav class="navbar">
-            <ul>
-                <li><a href="#historia">HISTORIA</a></li>
-                <li><a href="#estadisticas">ESTADISTICAS</a></li>
-                <li><a href="#build">BUILD</a></li>
-            </ul>
-        
-        <div class="logo">
-            <img class="" src="/Imagenes/Thresh Lampara.png" alt="">
-        </div>
+            <label for="toggle-menu"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="toggle-menu">
+            <ul class="navbar-list">
 
-            <ul>
+                <li><a href="#historia">HISTORIA</a></li>
+                <li><a href="#graficos">GRAFICOS</a></li>
+                <li><a href="#build">BUILD</a></li>
+
+                
+
                 <li><a href="#habilidades">HABILIDADES</a></li>
                 <li><a href="#montage">MONTAGE</a></li>
                 <li><a href="#skins">SKINS</a></li>
+
             </ul>
+
+            <div class="logo">
+                    <a href="#inicio">
+                        <img class="" src="/Imagenes/Thresh Lampara.png" alt="">
+                    </a>
+                </div>
 
         </nav>
 
@@ -45,7 +52,7 @@
 <!--! INICIO ASIDE -->
 
     <aside>
-        <a href="#header">
+        <a href="#inicio">
             <img class="thresh-chibi" src="/Imagenes/Thresh Chibi.png" alt="Thresh Chibi">
         </a>
     </aside>
@@ -58,6 +65,7 @@
         <video class="video-inicio" autoplay loop muted>
             <source src="/Videos/Thresh.mp4" type="video/mp4">
         </video>
+        <img class="imagen-fondo" src="/Imagenes/Thresh Skin.jpg" alt="Thresh">
         <div class="titulo-inicio">
             <h1>THRESH</h1>
             <p>EL CARCELERO IMPLACABLE</p>
@@ -108,15 +116,15 @@
     </section>
 
 <!--! FINAL HISTORIA -->
-<!--! INICIO ESTADISTICAS -->
+<!--! INICIO GRAFICOS -->
 
-    <section id="estadisticas">
+    <section id="graficos">
         
         <div class="titulo-contenedor">
-            <h2>ESTADISTICAS</h2>
+            <h2>GRAFICOS</h2>
         </div>
 
-        <div class="estadisticas-contenedor">
+        <div class="graficos-contenedor-padre">
 
             <div class="graficos-contenedor">
                 <div class="caja">
@@ -250,7 +258,7 @@
 
     </section>
 
-<!--! FINAL ESTADISTICAS -->    
+<!--! FINAL GRAFICOS -->    
 <!--! INICIO BUILD -->
 
     <section id="build">
@@ -339,7 +347,8 @@
         </div>
 
     <h3>Artículos Recomendados</h3>
-        <div class="objetos recomendados">
+        <div class="objetos">
+            
             <div class="objetos-contenedor">
                 <img class="objeto-imagen" src="https://www.mobafire.com/images/item/targons-buckler-46x.png" alt="Escudo de Targon">
                 <span>Escudo de Targon</span>
@@ -370,7 +379,7 @@
 
         <div class="caja-contenedor">
         <h3>Opciones Míticas</h3>    
-            <div class="objetos miticos">
+            <div class="objetos">
                 <div class="objetos-contenedor">
                     <img class="objeto-imagen" src="https://www.mobafire.com/images/item/evenshroud-46x.png" alt="Manto del Ocaso">
                     <span>Manto del Ocaso</span>
@@ -392,7 +401,7 @@
 
         <div class="caja-contenedor">
         <h3>Opciones de Botas</h3>    
-            <div class="objetos botas">
+            <div class="objetos">
                 <div class="objetos-contenedor">
                     <img class="objeto-imagen" src="https://www.mobafire.com/images/item/mercurys-treads-46x.png" alt="Botas de Mercurio">
                     <span>Botas de Mercurio</span>
@@ -415,7 +424,7 @@
 
         <div class="caja-contenedor">
         <h3>Opciones de Baratija</h3>
-            <div class="objetos baratija">
+            <div class="objetos">
                 <div class="objetos-contenedor">
                     <img class="objeto-imagen" src="https://www.mobafire.com/images/item/oracle-lens-46x.png" alt="Lente de Oráculo">
                     <span>Lente del Oráculo</span>
@@ -433,7 +442,7 @@
 
         <div class="caja-contenedor">
         <h3>Opciones de Inicio</h3>
-            <div class="objetos inicio">
+            <div class="objetos">
                 <div class="objetos-contenedor">
                     <img class="objeto-imagen" src="https://www.mobafire.com/images/item/relic-shield-46x.png" alt="Escudo Reliquia">
                     <span>Escudo Reliquia</span>
@@ -447,7 +456,7 @@
     </div>
 
     <h3>Opcional</h3>
-        <div class="objetos opcional">
+        <div class="objetos">
             <div class="objetos-contenedor">
                 <img class="objeto-imagen" src="https://www.mobafire.com/images/item/abyssal-mask-46x.png" alt="Máscara Abisal">
                 <span>Máscara Abisal</span>

@@ -45,7 +45,7 @@
 
 @keyframes slide-left {
     from {
-        transform: translatex(-100px);
+        transform: translatex(-150vh);
     }
     to {
         transform: translateY(0);
