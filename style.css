@@ -60,6 +60,9 @@ body::-webkit-scrollbar-thumb {
     border-bottom: 0px;
     z-index: 4;
 }
+.logo:hover {
+    animation: logo infinite 0.9s ease-out;
+}
 .logo img {
     position: absolute;
     top: 0px;
@@ -169,7 +172,7 @@ aside {
 }
 .thresh-texto {
     position: absolute;
-    display: block;
+    display: none;
     right: 250px;
     bottom: 150px;
     width: 310px;
@@ -183,6 +186,8 @@ aside {
     color: var(--color-dorado);
     border: 3px solid var(--color-dorado);
     z-index: 4;
+    animation: fade 1s ease-in;
+    box-shadow: 0px 0px 10px 5px var(--color-dorado);
 }
 .thresh-chibi {
     display: block;
@@ -200,10 +205,10 @@ aside {
     transition-delay: 2s;
 }
 #thresh-aside {
-    display: block;
+    display: none;
 }
 #thresh-aside:checked ~ .thresh-texto {
-    display: flex;
+    display: block;
 }
 
 /*! FIN ASIDE */
@@ -336,6 +341,7 @@ aside {
     align-items: center;
     background: rgba(17,19,24,.85);
     border: 2px solid var(--color-dorado);
+    box-shadow: 0px 0px 10px 5px var(--color-dorado);
 }
 .contenedor-imagen {
     position: absolute;
@@ -781,6 +787,7 @@ aside {
     flex-wrap: wrap;
     background: var(--color-negro);
     border: 2px solid var(--color-dorado);
+    box-shadow: 0px 0px 10px 5px var(--color-dorado);
 }
 #build h3 {
     width: 100%;
@@ -854,6 +861,7 @@ aside {
     padding: 50px 50px 20px 50px;
     background: var(--color-negro);
     border: 2px solid var(--color-dorado);
+    box-shadow: 0px 0px 10px 5px var(--color-dorado);
 }
 
 .caja-habilidades-fila {
@@ -987,6 +995,7 @@ aside {
     height: 790px;
     object-fit: cover;
     border: 2px solid var(--color-dorado);
+    box-shadow: 0px 0px 10px 5px var(--color-dorado);
 }
 
 /*! FINAL MONTAGE */
@@ -1017,6 +1026,7 @@ aside {
     width: 70%;
     margin: 100px auto 0 auto;
     z-index: 2;
+    box-shadow: 0px 0px 10px 5px var(--color-dorado);
 }
 .slide-skins {
     width: 100%;
