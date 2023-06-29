@@ -33,29 +33,38 @@ body::-webkit-scrollbar-thumb {
 /* PAGINA REGISTER */
 
 #register {
+    display: flex;
     width: 100%;
     height: 100vh;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .fondo-register {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
     opacity: 0.6;
 }
+.imagen-fondo {
+    position: absolute;
+    display: none;
+    left:0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .register-contenedor {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 750px;
+    margin: 70px;
+    padding: 50px;
+    gap: 50px;
     background: rgba(17, 19, 24, 0.94);
     border: 2px solid var(--color-dorado);
-    padding: 50px;
-    margin: 70px;
-    gap: 50px;
     animation: fade 1.5s ease-in;
 }
 .titulo-caja {
@@ -66,9 +75,9 @@ body::-webkit-scrollbar-thumb {
 .titulo-caja a {
     font-size: 25px;
     font-weight: 600;
-    color: var(--color-blanco);
     letter-spacing: 2px;
     text-decoration: none;
+    color: var(--color-blanco);
     transition: all 0.4s linear;
 }
 .titulo-caja a:hover {
@@ -76,8 +85,8 @@ body::-webkit-scrollbar-thumb {
     border-bottom: 4px solid var(--color-dorado);
 }
 .titulo-caja a:last-child {
-    color: var(--color-dorado);
     font-size: 28px;
+    color: var(--color-dorado);
     border-bottom: 4px solid var(--color-dorado);
 }
 .register-caja {
@@ -89,7 +98,7 @@ body::-webkit-scrollbar-thumb {
     width: 33%;
     height: 60px;
     border-radius: 10px;
-    /* border: 2.5px solid var(--color-blanco); */
+    border: none;
     outline: none;
     cursor: pointer;
     transition: all 0.5s ease-in;
@@ -119,8 +128,8 @@ body::-webkit-scrollbar-thumb {
 .correo-caja p {
     font-size: 18px;
     font-weight: 400;
-    color: var(--color-blanco);
     letter-spacing: 2px;
+    color: var(--color-blanco);
 }
 .formulario {
     display: flex;
@@ -131,16 +140,15 @@ body::-webkit-scrollbar-thumb {
     position: relative;
 }
 .form-caja input{
-    background: var(--color-carbon);
     width: 100%;
     height: 65px;
-    color: var(--color-blanco);
     padding: 25px 50px 25px 76px;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 4px;
-    color: var(--color-blanco);
     outline: none;
+    background: var(--color-carbon);
+    color: var(--color-blanco);
     border: 2px solid var(--color-dorado);
     border-radius: 10px;
 }
@@ -154,10 +162,10 @@ body::-webkit-scrollbar-thumb {
 .enviar {
     width: 100%;
     height: 65px;
-    border-radius: 10px;
-    border: 3px solid var(--color-blanco);
-    background: var(--color-dorado);
     cursor: pointer;
+    background: var(--color-dorado);
+    border: 3px solid var(--color-blanco);
+    border-radius: 10px;
     transition: all 0.5s ease-in;
 }
 .enviar:hover {
@@ -167,8 +175,8 @@ body::-webkit-scrollbar-thumb {
 .enviar span {
     font-size: 20px;
     font-weight: 800;
-    color: var(--color-carbon);
     letter-spacing: 5px;
+    color: var(--color-carbon);
 }
 .terminos-caja {
     display: flex;
@@ -181,10 +189,10 @@ body::-webkit-scrollbar-thumb {
 .terminos-caja label{
     font-size: 20px;
     font-weight: 500;
-    color: var(--color-blanco);
     letter-spacing: 5px;
     line-height: 30px;
     cursor: pointer;
+    color: var(--color-blanco);
 }
 .terminos-caja label b{
     font-weight: 700;
@@ -201,12 +209,17 @@ body::-webkit-scrollbar-thumb {
 .inicio-caja a{
     font-size: 20px;
     font-weight: 600;
-    color: var(--color-dorado);
     letter-spacing: 5px;
     text-decoration: none;
+    color: var(--color-dorado);
+    transition: all 1s ease-in;
+}
+.inicio-caja a:hover {
+    scale: 1.1;
+    animation: slide-right infinite .5s linear;
 }
 .inicio-caja .fa-solid {
+    margin-right: 15px;
     font-size: 25px;
     color: var(--color-dorado);
-    margin-right: 15px;
 }

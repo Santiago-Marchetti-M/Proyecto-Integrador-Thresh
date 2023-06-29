@@ -50,10 +50,10 @@ body::-webkit-scrollbar-thumb {
 .logo {
     position: absolute;
     display: flex;
-    margin-left: -78px;
     min-width: 175px;
     min-height: 175px;
     clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+    margin-left: -78px;
     background: var(--color-carbon);
     border: 4px solid var(--color-dorado);
     border-top: 0px;
@@ -89,24 +89,39 @@ body::-webkit-scrollbar-thumb {
     margin-left: 250px;
 }
 .navbar-list li a {
+    position: relative;
+    padding: 5px 5px;
     text-decoration: none;
     color: var(--color-blanco);
-    transition: all 0.35s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.navbar-list li a:after {
+    content: "";
+    position: absolute;
+    background: var(--color-dorado);
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
 }
 .navbar-list li a:hover {
     color: var(--color-dorado);
 }
+.navbar-list li a:hover:after {
+    width: 100%;
+}
 .login {
     position: absolute;
-    right: 40px;
     top: 9px;
+    right: 40px;
 }
 .login .fa-solid {
     font-size: 25px;
+    padding: 15px;
     color: var(--color-blanco);
     background: var(--color-carbon);
     border: 4px solid var(--color-blanco);
-    padding: 15px;
     border-radius: 50%;
     transition: all 0.5s ease-in-out;
 }
@@ -120,16 +135,16 @@ body::-webkit-scrollbar-thumb {
 
 .navbar label {
     position: absolute;
-    left: 40px;
     top: 9px;
+    left: 40px;
 }
 .navbar label i {
     display: none;
     font-size: 25px;
+    padding: 15px;
     color: var(--color-blanco);
     background: var(--color-carbon);
     border: 4px solid var(--color-blanco);
-    padding: 15px;
     border-radius: 50%;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
@@ -144,29 +159,54 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*! FINAL HEADER */
+/*! INICIO ASIDE */
 
 aside {
     position: fixed;
-    right: 25px;
     bottom: 25px;
+    right: 25px;
+    z-index: 4;
+}
+.thresh-texto {
+    position: absolute;
+    display: block;
+    right: 250px;
+    bottom: 150px;
+    width: 310px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-align: left;
+    background: var(--color-negro);
+    color: var(--color-dorado);
+    border: 3px solid var(--color-dorado);
     z-index: 4;
 }
 .thresh-chibi {
     display: block;
     position: absolute;
-    right: 0px;
     bottom: 0px;
+    right: 0px;
     width: 250px;
     cursor: pointer;
     filter: drop-shadow(0px 0px 5px var(--color-blanco));
     z-index: 4;
 }
 .thresh-chibi:hover {
-    animation: thresh-chibi 1.2s;
+    animation: thresh-chibi 1.2s ease-in;
     transition: all 2s ease-in ;
     transition-delay: 2s;
 }
+#thresh-aside {
+    display: block;
+}
+#thresh-aside:checked ~ .thresh-texto {
+    display: flex;
+}
 
+/*! FIN ASIDE */
 /*! INICIO PORTADA */
 
 #inicio {
@@ -184,17 +224,17 @@ aside {
     left:0;
     width: 100%;
     height: 100vh;
+    margin-top: 55px;
     object-fit: cover;
     border-bottom: 3px solid var(--color-dorado);
-    margin-top: 55px;
 }
 .imagen-fondo {
     display: none;
     position: absolute;
-    margin-top: 85px;
     left:0%;
     width: 100%;
     height: 100%;
+    margin-top: 85px;
     object-fit: cover;
 }
 .titulo-inicio {
@@ -220,10 +260,10 @@ aside {
     -webkit-text-stroke: 1.5px var(--color-dorado);
 }
 .titulo-inicio p{
+    margin-top:30px;
     font-size: 40px;
     font-weight: 500px;
     letter-spacing: 12px;
-    margin-top:30px;
     color: var(--color-blanco);
     -webkit-text-stroke: 0.8px var(--color-dorado);
 }
@@ -234,24 +274,24 @@ aside {
 
 #historia {
     display: flex;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 100px;
-    width: 100%;
-    position: relative;
     background: var(--color-negro);
     z-index: 3;
     scroll-margin-top: 10ex;
 }
 .fondo-historia {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     opacity: 0.15;
     z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 .titulo-contenedor {
     display: flex;
@@ -265,37 +305,37 @@ aside {
     z-index: 2;
 }
 .titulo-contenedor h2 {
+    margin: 25px 0px;
     font-size: 70px;
     font-weight: 800;
     letter-spacing: 10px;
     color: var(--color-dorado);
     -webkit-text-stroke: 1.25px var(--color-blanco);
-    margin: 25px 0px;
 }
 .thresh-contenedor {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 350px 500px;
     row-gap: 25px;
-    justify-content: center;
-    align-items: center;
     width: 70%;
     margin-top: 150px;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
 }
 .contenedor-arriba {
+    display: flex;
     position: relative;
     grid-column: 1/1;
     grid-row: 1/2;
-    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 100px 30px 0px 30px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rgba(17,19,24,.85);
-    width: 100%;
-    height: 100%;
     border: 2px solid var(--color-dorado);
-    padding: 100px 30px 0px 30px;
 }
 .contenedor-imagen {
     position: absolute;
@@ -303,49 +343,50 @@ aside {
     width: 200px;
     height: 200px;
     background: var(--color-carbon);
-    border-radius: 50%;
     border: 4px solid var(--color-dorado);
+    border-radius: 50%;
     overflow: hidden;
 }
 .contenedor-imagen img {
     position: absolute;
-    width: 180px;
-    height: 180px;
     top: 3%;
     left: 3.5%;
-    border-radius: 50%;
+    width: 180px;
+    height: 180px;
     border: 3px solid var(--color-dorado);
+    border-radius: 50%;
+    cursor: pointer;
 }
 .contenedor-imagen:hover {
     scale: 1.2;
     transition: all 0.5s ease-in;
 }
 .contenedor-arriba h2 {
+    margin: 25px 0px;
     font-size: 40px;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 6px;
     color: var(--color-dorado);
-    margin: 25px 0px;
 }
 .contenedor-arriba p {
+    margin: 25px 0px;
     font-size: 35px;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 2px;
     word-spacing: 5px;
     color: var(--color-blanco);
-    margin: 25px 0px;
     text-align: center;
 }
 .contenedor-abajo {
     grid-column: 1/1;
     grid-row: 2/3;
-    background: rgba(17,19,24,.85);
+    padding: 25px 50px;
     width: 100%;
     height: 100%;
+    background: rgba(17,19,24,.85);
     border: 2px solid var(--color-dorado);
-    padding: 25px 50px;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -358,23 +399,23 @@ aside {
     border-radius: 2px;
 }
 .contenedor-abajo p {
+    margin: 25px 0px;
     font-size: 20px;
     font-weight: 400;
-    color: var(--color-blanco);
     line-height: 40px;
     word-spacing: 5px;
     letter-spacing: 2px;
-    margin: 25px 0px;
+    color: var(--color-blanco);
 }
 .contenedor-abajo p::first-letter {
     font-size: 50px;
-    color: var(--color-dorado);
     font-weight: 500;
+    color: var(--color-dorado);
 }
 .contenedor-abajo p b {
-    color: var(--color-dorado);
-    font-weight: 700 bold;
     font-size: 22px;
+    font-weight: 700 bold;
+    color: var(--color-dorado);
 }
 
 /*! FINAL HISTORIA */
@@ -409,24 +450,24 @@ aside {
     border: 2px solid var(--color-dorado);
 }
 .graficos-contenedor .caja h3{
+    margin-top: 50px;
     font-size: 30px;
     font-weight: 500;
-    color: var(--color-blanco);
     letter-spacing: 2px;
-    margin-top: 50px;
+    color: var(--color-blanco);
 }
 .circulo {
     position: relative;
     width: 200px;
     height: 200px;
     background: var(--color-carbon);
-    border-radius: 100%;
     border: 4px solid var(--color-dorado);
+    border-radius: 100%;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
 }
 .circulo:hover {
     scale: 1.1;
-    transition: all 0.5s ease-in;
-    cursor: pointer;
 }
 .circulo p {
     position: absolute;
@@ -434,11 +475,12 @@ aside {
     left: 30%;
     font-size: 25px;
     font-weight: 600;
-    color: var(--color-blanco);
     letter-spacing: 5px;
+    color: var(--color-blanco);
 }
 
-.asd-contenedor {
+
+.rol-hechizos-contenedor {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -446,7 +488,7 @@ aside {
     margin: 50px;
     flex-wrap: wrap;
 }
-.asd-contenedor .caja-rol {
+.rol-hechizos-contenedor .caja-rol {
     display: flex;
     flex-direction: row;
     padding: 50px;
@@ -463,12 +505,12 @@ aside {
     align-items: center;
 }
 .rol h3 {
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--color-dorado);
-    letter-spacing: 5px;
     margin: 10px;
     margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--color-dorado);
 }
 .rol img {
     width: 120px;
@@ -477,13 +519,13 @@ aside {
 .rol p {
     font-size: 25px;
     font-weight: 400;
-    color: var(--color-blanco);
     line-height: 70px;
     word-spacing: 2px;
     letter-spacing: 2px;
+    color: var(--color-blanco);
 }
 
-.asd-contenedor .caja-hechizos {
+.rol-hechizos-contenedor .caja-hechizos {
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -494,15 +536,15 @@ aside {
     border: 2px solid var(--color-dorado);
 }
 .caja-hechizos h3 {
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--color-dorado);
-    letter-spacing: 5px;
     margin: 10px;
     margin-bottom: 40px;
+    margin-left: 80px;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 5px;
     align-items: center;
     justify-content: center;
-    margin-left: 80px;
+    color: var(--color-dorado);
 }
 .hechizos {
     display: flex;
@@ -510,22 +552,22 @@ aside {
     justify-content: space-evenly;
 }
 .hechizos img {
+    margin: 5px;
+    margin-right: 20px;
     width: 50px;
     height: 50px;
-    margin: 5px;
     border: 2px solid var(--color-dorado);
-    margin-right: 20px;
 }
 .hechizos p {
+    margin-left: 30px;
+    margin-right: 30px;
     font-size: 20px;
     font-weight: 400;
-    color: var(--color-blanco);
     line-height: 70px;
     word-spacing: 2px;
     letter-spacing: 2px;
-    margin-left: 30px;
-    margin-right: 30px;
     text-align: left;
+    color: var(--color-blanco);
 }
 
 .campeones {
@@ -535,41 +577,41 @@ aside {
     gap: 50px;
 }
 .campeones .caja {
+    position: relative;
     display: flex;
     flex-direction: row;
     gap: 30px;
-    background: var(--color-negro);
-    border: 2px solid var(--color-dorado);
-    align-items: center;
-    justify-content: center;
-    position: relative;
     width: 500px;
     padding: 50px;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-negro);
+    border: 2px solid var(--color-dorado);
 }
 .campeones .caja header {
     position: absolute;
     top: 50px;
     font-size: 30px;
     font-weight: 600;
-    color: var(--color-dorado);
     letter-spacing: 5px;
     align-items: center;
     justify-content: center;
+    color: var(--color-dorado);
 }
 .campeones .caja-contenedor {
     display: flex;
+    margin-top: 80px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
 }
 .campeones .caja-contenedor img {
     width: 125px;
     height: 125px;
-    border-radius: 50%;
-    border: 5px solid var(--color-dorado);
     cursor: pointer;
     opacity: 0.5;
+    border: 5px solid var(--color-dorado);
+    border-radius: 50%;
 }
 .campeones .caja-contenedor img:hover {
     scale: 1.1;
@@ -577,18 +619,18 @@ aside {
     opacity: 1;
 }
 .campeones .caja-contenedor h4 {
+    margin-top: 20px;
     font-size: 22px;
     font-weight: 500;
-    color: var(--color-blanco);
     letter-spacing: 2px;
-    margin-top: 20px;
+    color: var(--color-blanco);
 }
 .campeones .caja-contenedor p {
+    margin-top: 10px;
     font-size: 20px;
     font-weight: 600;
-    color: var(--color-rojo);
     letter-spacing: 5px;
-    margin-top: 10px;
+    color: var(--color-rojo);
 }
 .campeones .caja-contenedor p span {
     color: var(--color-verde);
@@ -598,12 +640,12 @@ aside {
 /*! INICIO BUILD */
 
 #build {
-    justify-content: center;
-    text-align: left;
-    align-items: center;
     width: 100%;
     margin: 0px auto;
     padding-bottom: 100px;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
     scroll-margin-top: 10ex;
 }
 .build-contenedor {
@@ -618,12 +660,12 @@ aside {
 }
 .principal .fondo {
     position: absolute;
-    background: var(--color-negro);
-    border: 2px solid var(--color-dorado);
-    width: 950px;
-    height: 25px;
     top: 20%;
     left: 5%;
+    width: 950px;
+    height: 25px;
+    background: var(--color-negro);
+    border: 2px solid var(--color-dorado);
     z-index: 1;
 }
 .runas-contenedor {
@@ -639,20 +681,20 @@ aside {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    border: 4px solid var(--color-dorado);
     cursor: pointer;
     background: var(--color-carbon);
+    border: 4px solid var(--color-dorado);
 }
 .runas-contenedor-terciaria {
     position: relative;
     height: 80px;
     width: 80px;
-    border-radius: 50%;
-    border: 4px solid var(--color-dorado);
     cursor: pointer;
-    background: var(--color-carbon);
-    z-index: 2;
     justify-content: space-between;
+    background: var(--color-carbon);
+    border: 4px solid var(--color-dorado);
+    border-radius: 50%;    
+    z-index: 2;
 }
 .runas-imagen-terciarias {
     position: absolute;
@@ -660,31 +702,31 @@ aside {
     left: 22%;
     height: 40px;
     width: 40px;
-    border-radius: 20%;
     cursor: pointer;
     background: var(--color-carbon);
+    border-radius: 20%;
     z-index: 2;
 }
 .runas-contenedor span {
+    display: block;
+    width: 150px;
     font-size: 20px;
     font-weight: 500;
-    color: var(--color-blanco);
     letter-spacing: 2px;
     line-height: 30px;
-    width: 150px;
-    display: block;
+    color: var(--color-blanco);
 }
 .secundaria .runas-contenedor span {
     word-break: break-all;
 }
 .secundaria .fondo {
     position: absolute;
-    background: var(--color-negro);
-    border: 2px solid var(--color-dorado);
-    width: 500px;
-    height: 25px;
     top: 20%;
     left: 5%;
+    width: 500px;
+    height: 25px;
+    background: var(--color-negro);
+    border: 2px solid var(--color-dorado);
     z-index: 1;
 }
 .runas-caja {
@@ -696,12 +738,12 @@ aside {
 }
 .terciarias .fondo {
     position: absolute;
-    background: var(--color-negro);
-    border: 2px solid var(--color-dorado);
-    width: 350px;
-    height: 20px;
     top: 18%;
     left: 5%;
+    width: 350px;
+    height: 20px;
+    background: var(--color-negro);
+    border: 2px solid var(--color-dorado);
     z-index: 1;
 }
 .runas-terciarias {
@@ -719,35 +761,35 @@ aside {
     width: 140px;
 }
 .runas-terciarias-caja-texto span {
+    margin-bottom: 10px;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 5px;
     color: var(--color-dorado);
-    margin-bottom: 10px;
 }
 .runas-terciarias-caja-texto p {
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 1px;
-    color: var(--color-blanco);
     line-height: 30px;
+    color: var(--color-blanco);
 }
 .objetos {
     display: inline-flex;
+    padding: 50px 25px 40px 25px;
+    gap: 20px;
+    flex-wrap: wrap;
     background: var(--color-negro);
     border: 2px solid var(--color-dorado);
-    padding: 50px 25px 40px 25px;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 #build h3 {
+    width: 100%;
+    margin: 75px 0px 50px 0px;
     font-size: 35px;
     font-weight: 600;
-    color: var(--color-dorado);
     letter-spacing: 2px;
-    margin: 75px 0px 50px 0px;
     text-align: left;
-    width: 100%;
+    color: var(--color-dorado);
 }
 .objetos-contenedor {
     display: flex;
@@ -757,22 +799,22 @@ aside {
     gap: 20px;
 }
 .objeto-imagen {
+    display: block;
+    margin: 0 auto;
     width: 70px;
     height: 70px;
     border: 4px solid var(--color-dorado);
-    display: block;
-    margin: 0 auto;
 }
 .objetos-contenedor span {
+    display: block;
+    width: 120px;
     font-size: 16px;
     font-weight: 400;
-    color: var(--color-blanco);
     letter-spacing: 1px;
     line-height: 25px;
-    width: 120px;
-    display: block;
     word-break: break-word;
     justify-content: start;
+    color: var(--color-blanco);
 }
 .objetos-caja {
     display: flex;
@@ -784,9 +826,9 @@ aside {
 .objetos-caja .caja-contenedor {
     display: flex;
     flex-direction: column;
+    margin-right: 100px;
     justify-content: center;
     align-items: center;
-    margin-right: 100px;
 }
 
 
@@ -794,10 +836,10 @@ aside {
 /*! INICIO HABILIDADES */
 
 #habilidades {
-    justify-content: center;
-    align-items: center;
     width: 100%;
     padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
     scroll-margin-top: 10ex;
 }
 .habilidades-contenedor {
@@ -805,28 +847,28 @@ aside {
     margin: 100px auto 0 auto;
 }
 .caja-habilidades {
-    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 50px 50px 20px 50px;
     background: var(--color-negro);
     border: 2px solid var(--color-dorado);
-    padding: 50px 50px 20px 50px;
-    position: relative;
 }
 
 .caja-habilidades-fila {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     margin-bottom: 25px;
     gap: 50px;
+    justify-content: flex-start;
 }
 .imagen-habilidades img{
+    display: block;
+    margin: 0 auto;
     width: 70px;
     height: 70px;
     border: 4px solid var(--color-dorado);
-    display: block;
-    margin: 0 auto;
 }
 .nombre-habilidades {
     display: flex;
@@ -834,22 +876,22 @@ aside {
     width: 45%;
 }
 .nombre-habilidades h3 {
+    padding-bottom: 10px;
     font-size: 30px;
     font-weight: 600;
-    color: var(--color-dorado);
     letter-spacing: 5px;
     align-items: center;
     justify-content: center;
-    padding-bottom: 10px;
+    color: var(--color-dorado);
 }
 .nombre-habilidades p{
+    padding-bottom: 10px;
     font-size: 20px;
     font-weight: 400;
-    color: var(--color-blanco);
     letter-spacing: 5px;
     align-items: center;
     justify-content: center;
-    padding-bottom: 10px;
+    color: var(--color-blanco);
 }
 .enfriamiento-habilidades {
     display: flex;
@@ -857,35 +899,35 @@ aside {
     width: 79%;
 }
 .enfriamiento-habilidades p{
+    padding-bottom: 15px;
     font-size: 20px;
     font-weight: 400;
-    color: var(--color-blanco);
     letter-spacing: 5px;
     align-items: center;
     justify-content: center;
     text-align: right;
-    padding-bottom: 15px
+    color: var(--color-blanco);
 }
 .caja-habilidades hr {
-    border: 2px solid var(--color-dorado);
-    background: var(--color-dorado);
     height: 4px;
+    background: var(--color-dorado);
+    border: 2px solid var(--color-dorado);
 }
 .informacion-habilidades p{
+    padding-top: 25px;
     font-size: 20px;
     font-weight: 400;
-    color: var(--color-blanco);
     letter-spacing: 2px;
     line-height: 40px;
-    padding-top: 25px;
+    color: var(--color-blanco);
 }
 .informacion-habilidades p b{
-    color: var(--color-dorado);
     font-weight: 600;
+    color: var(--color-dorado);
 }
 .informacion-habilidades p span{
-    color: var(--color-verde);
     font-weight: 600;
+    color: var(--color-verde);
 }
 
 .caja-habilidades-videos {
@@ -894,21 +936,21 @@ aside {
     align-items: center;
 }
 .video-habilidades {
+    margin: 50px;
     width: 800px;
     height: 500px;
     object-fit: cover;
     border: 2px solid var(--color-dorado);
-    margin: 50px;
 }
 
 /*! FINAL HABILIDADES */
 /*! INICIO MONTAGE */
 
 #montage {
-    justify-content: center;
-    align-items: center;
     width: 100%;
     padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
     scroll-margin-top: 10ex;
 }
 .montage-contenedor {
@@ -916,21 +958,21 @@ aside {
     margin: 100px auto 0 auto;
 }
 .montage-contenedor h3 {
+    margin: 50px 0px;
     font-size: 35px;
     font-weight: 600;
-    color: var(--color-dorado);
     letter-spacing: 5px;
-    margin: 50px 0px;
     text-align: center;
+    color: var(--color-dorado);
 }
 .montage-contenedor p {
+    margin-bottom: 50px;
     font-size: 20px;
     font-weight: 400;
-    color: var(--color-blanco);
     letter-spacing: 2px;
     line-height: 40px;
     text-align: left;
-    margin-bottom: 50px;
+    color: var(--color-blanco);
 }
 .montage-contenedor p b {
     color: var(--color-dorado);
@@ -951,25 +993,25 @@ aside {
 /*! INICIO SKINS */
 
 #skins {
+    position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding-bottom: 100px;
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 100%;
-    padding-bottom: 100px;
-    position: relative;
     background: var(--color-negro);
     scroll-margin-top: 10ex;
 }
 .fondo-skins {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     opacity: 0.15;
     z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 .skins-contenedor {
     width: 70%;
@@ -1001,23 +1043,23 @@ aside {
 
     .pie-pagina {
         width: 100%;
-        background: var(--color-negro);
         justify-content: space-evenly;
+        background: var(--color-negro);
     }
     .pie-pagina .contenedor-1 {
-        width: 100%;
-        margin: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
+        width: 100%;
+        margin: auto;
         padding: 50px 50px;
         border-top: 2px solid var(--color-dorado);
         border-bottom: 2px solid var(--color-dorado);
     }
     .pie-pagina .contenedor-1 .caja figure {
+        display: flex;
         width: 100%;
         height: 100%;
-        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -1031,18 +1073,21 @@ aside {
         align-items: center;
     }
     .pie-pagina .contenedor-1 .caja h2 {
-        color: var(--color-dorado);
         margin-bottom: 25px;
         font-size: 30px;
         font-weight: 600;
         letter-spacing: 5px;
+        color: var(--color-dorado);
     }
     .pie-pagina .contenedor-1 .caja p {
-        color: var(--color-blanco);
         font-size: 20px;
         font-weight: 400;
         letter-spacing: 2px;
         line-height: 32px;
+        color: var(--color-blanco);
+    }
+    .pie-pagina .contenedor-1 .caja p b {
+        color: var(--color-dorado);
     }
     .pie-pagina .contenedor-1 .contacto {
         display: flex;
@@ -1051,18 +1096,18 @@ aside {
         justify-content: center;
     }
     .pie-pagina .contenedor-1 .contacto a {
+        position: relative;
         display: inline-block;
-        text-decoration: none;
         width: 70px;
         height: 70px;
-        line-height: 45px;
-        color: var(--color-blanco);
         margin-right: 0px;
-        background: var(--color-carbon);
-        border: 4px solid var(--color-blanco);
+        line-height: 45px;
+        text-decoration: none;
         text-align: center;
+        background: var(--color-carbon);
+        color: var(--color-blanco);
+        border: 4px solid var(--color-blanco);
         transition: all 300ms ease;
-        position: relative;
     }
     .pie-pagina .contenedor-1 .contacto a:hover {
         color: var(--color-dorado);
@@ -1072,9 +1117,9 @@ aside {
     }
     
     .pie-pagina .contenedor-1 .contacto a .fa-brands {
+        position: absolute;
         display: flex;
         font-size: 40px;
-        position: absolute;
     }
     .pie-pagina .contenedor-1 .contacto a .fa-instagram {
         top: 20%;
@@ -1090,9 +1135,9 @@ aside {
     }
 
     .pie-pagina .contenedor-2 {
-        background: var(--color-carbon);
         padding: 15px 10px;
         text-align: center;
+        background: var(--color-carbon);
         color: var(--color-blanco);
     }
     .pie-pagina .contenedor-2 small {

@@ -56,10 +56,10 @@
 
 @keyframes slide-right {
     from {
-        transform: translatex(100px);
+        transform: translatex(5px);
     }
     to {
-        transform: translateY(0);
+        transform: translatex(-5px);
     }
 }
 

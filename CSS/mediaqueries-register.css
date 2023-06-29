@@ -1,0 +1,169 @@
+:root {
+    --color-carbon: #101414;
+    --color-negro: #111318;
+    --color-gris: #6c757d;
+    --color-blanco: #d9d5bb;
+    --color-rojo: #ff4655;
+    --color-verde: #147253;
+    --color-dorado: #937341;
+    --color-marron: #31271e;
+}
+
+/*! COMPUTADORAS */
+
+@media (max-width: 1000px) { 
+
+    .register-contenedor {
+        width: 500px;
+        padding: 40px;
+        margin: 100px;
+        gap: 40px;
+    }
+    .register-contenedor {
+
+        .titulo-caja a {
+        font-size: 22px;
+        }
+        .titulo-caja a:first-child {
+            font-size: 25px;
+        }
+        .register-caja {
+            gap: 15px;
+        }
+        .register-caja button {
+            height: 50px;
+        }
+        .register-caja button img {
+            width: 30px;
+        }
+        .correo-caja p {
+            font-size: 16px;
+        }
+        .formulario {
+            gap: 20px;
+        }
+        .form-caja input{
+            height: 50px;
+            padding: 25px 50px 25px 60px;
+            font-size: 18px;
+        }
+        .form-caja .fa-solid {
+            top: 15px;
+            left: 20px;
+            font-size: 22px;
+        }
+        .enviar {
+            height: 50px;
+        }
+        .enviar span {
+            font-size: 18px;
+        }
+        .terminos-caja input{
+            width: 35px;
+        }
+        .terminos-caja label{
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+        .inicio-caja {
+            gap: 40px;
+        }
+        .inicio-caja a{
+            font-size: 18px;
+        }
+        .inicio-caja .fa-solid {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+    }
+    
+}
+
+/*! CELULAR VERTICAL */
+
+@media (max-width: 620px) { 
+    
+    /* INICIO LOGIN */
+
+    .register-contenedor {
+        width: 325px;
+        padding: 25px;
+        margin: 50px;
+        gap: 25px;
+    }
+    .fondo-register {
+        display: none;
+    }
+    .imagen-fondo {
+        display: flex;
+    }
+    .register-contenedor {
+
+        .titulo-caja a {
+        font-size: 16px;
+        letter-spacing: 1px;
+        }
+        .titulo-caja a:first-child {
+            font-size: 18px;
+        }
+        .register-caja {
+            gap: 10px;
+        }
+        .register-caja button {
+            height: 40px;
+        }
+        .register-caja button img {
+            width: 20px;
+        }
+        .correo-caja p {
+            font-size: 14px;
+            letter-spacing: 0px;
+        }
+        .formulario {
+            gap: 15px;
+        }
+        .form-caja input{
+            height: 50px;
+            padding: 25px 40px 25px 50px;
+            font-size: 16px;
+            letter-spacing: 0px;
+        }
+        .form-caja .fa-solid {
+            top: 16px;
+            left: 18px;
+            font-size: 20px;
+        }
+        .enviar {
+            height: 50px;
+        }
+        .enviar span {
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+        .terminos-caja {
+            gap: 20px;
+        }
+        .terminos-caja input{
+            width: 30px;
+        }
+        .terminos-caja label{
+            font-size: 14px;
+            letter-spacing: 0px;
+            line-height: 25px;
+        }
+        .inicio-caja {
+            gap: 25px;
+        }
+        .inicio-caja a{
+            font-size: 16px;
+            letter-spacing: 0px;
+        }
+        .inicio-caja .fa-solid {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+    }
+    
+}
